@@ -1,0 +1,167 @@
+Ingredient name,Location,Staple,Seasons,Perishable,FamilyPack,MeatType
+Asparagus,Produce:Front,0,sufw,0,0
+Avocados,Produce:Front,0,sufw,0,0
+Green Peppers,Produce:LeftSide,0,sufw,0,0
+Red Peppers,Produce:LeftSide,0,sufw,0,0
+Anaheim Peppers,Produce:LeftSide,0,sufw,0,0
+Red Cherry Peppers,Produce:LeftSide,0,sufw,0,0
+Thai Chili Peppers,Produce:LeftSide,0,sufw,0,0
+Serrano Peppers,Produce:LeftSide,0,sufw,0,0
+Leeks,Produce:LeftSide,0,sufw,0,0
+Mushrooms,Produce:LeftSide,0,sufw,0,0
+Mixed Mushrooms,Produce:LeftSide,0,sufw,0,0
+Baby Bella Mushrooms,Produce:LeftSide,0,sufw,0,0
+Ginger,Produce:Asian,0,sufw,0,0
+Yo Sum Choy,Produce:Asian,0,sufw,1,0
+Chinese Broccoli,Produce:Asian,0,sufw,1,0
+Corn on the Cob,Produce:Middle,0,uf,0,0
+Tomatoes on the Vine,Produce:Middle,0,sufw,0,0
+Grape Tomatoes,Produce:Middle,0,sufw,0,0
+Plums,Produce:Middle,0,u,0,0
+Roma Tomatoes,Produce:Middle,0,sufw,0,0
+Eggplant,Produce:Middle,0,sufw,0,0
+Zucchini,Produce:Middle,0,sufw,0,0
+Yellow Squash,Produce:Middle,0,sufw,0,0
+Lime,Produce:Middle,0,uf,0,0
+Lemon,Produce:Middle,0,uf,0,0
+Red Onions,Produce:Back,0,sufw,0,0
+Red Potatoes,Produce:Back,0,sufw,0,0
+Russet Potatoes,Produce:Back,0,sufw,0,0
+Purple Potatoes,Produce:Back,0,sufw,0,0
+Acorn Squash,Produce:Back,0,sufw,0,0
+Butternut Squash,Produce:Back,0,sufw,0,0
+Broccoli Rabe,Produce:Herbs,0,sufw,1,0
+Swiss Chard,Produce:Herbs,0,sufw,1,0
+Cilantro,Produce:Herbs,0,sufw,1,0
+Carrots,Produce:RightSide,0,sufw,0,0
+Celery,Produce:RightSide,0,sufw,0,0
+Kale,Produce:RightSide,0,sufw,0,0
+Okra,Produce,0,sufw,0,0
+Thai Basil,Produce,0,sufw,0,0
+Romano,Cheese,0,sufw,0,0
+Hard Cheese,Cheese,0,sufw,0,0
+Feta Cheese,Cheese,0,sufw,0,0
+Soft Cheese,Cheese,0,sufw,0,0
+Mozzarella,Cheese,0,sufw,0,0
+Turkey,Meat,0,fw,0,1,Turkey
+Bottom Round Roast,Meat,0,sufw,0,1,Beef
+Chuck Roast,Meat,0,sufw,0,1,Beef
+Smoked Sausage,Meat,0,sufw,0,0,Pork
+Pork Tenderloin,Meat,0,sufw,0,0,Pork
+Bacon,Meat,0,sufw,0,0,Pork
+Chicken Thighs,Meat,0,sufw,0,1,Chicken
+Boneless Lamb,Meat,0,sufw,0,0,Mutton
+Shrimp,Fish,0,sufw,0,0,Fish
+Cod,Fish,0,sufw,1,0,Fish
+Flounder,Fish,0,sufw,1,0,Fish
+Cashews,WholeNuts,0,sufw,0,0
+Peanuts,WholeNuts,1,sufw,0,0
+Almonds,WholeNuts,1,sufw,0,0
+GF Gnocchi,GF,0,sufw,0,0
+GF Flour,GF,1,sufw,0,0
+Frozen Peas,Frozen:Vegetable,0,sufw,0,0
+Frozen Peas and Carrots,Frozen:Vegetable,0,sufw,0,0
+Pearl Onions,Frozen:Vegetable,0,sufw,0,0
+Mexican Cheese,Back:ButterAndCheese,1,sufw,0,0
+Italian Cheese,Back:ButterAndCheese,0,sufw,0,0
+Sour Cream,Back:ButterAndCheese,0,sufw,0,0
+Cream Cheese,Back:ButterAndCheese,0,sufw,0,0
+Plain Yoghurt,Back:Yogurt,0,sufw,0,0
+Burrito Tortillas,International:Mexican,0,sufw,0,0
+Taco Shells,International:Mexican,0,sufw,0,0
+Rice,International:Indian,1,sufw,0,0
+Tamarind Paste,International:Indian,1,sufw,0,0
+Urad Dal,International:Indian,1,sufw,0,0
+Black Lentils,International:Indian,1,sufw,0,0
+Old El Paso Enchilada Sauce,International:Mexican,0,sufw,0,0
+Rotel,International:Mexican,0,sufw,0,0
+Dark Red Kidney Beans,International:Canned,0,sufw,0,0
+Great Northern Beans,International:Canned,0,sufw,0,0
+Red Beans,International:Canned,0,sufw,0,0
+Chickpeas,International:Canned,0,sufw,0,0
+Bean Sprouts,International:EastAsian,0,sufw,0,0
+Baby Corn,International:EastAsian,0,sufw,0,0
+Bamboo Shoots,International:EastAsian,0,sufw,0,0
+Soy Sauce,International:EastAsian,1,sufw,0,0
+Wegmans Stir Fry Sauce,International:EastAsian,1,sufw,0,0
+Wegmans Thai Peanut Sauce,International:EastAsian,1,sufw,0,0
+Oyster Sauce,International:EastAsian,0,sufw,0,0
+Fish Sauce,International:EastAsian,0,sufw,0,0
+Coconut Milk,International:EastAsian,0,sufw,0,0
+Vermicelli Rice Noodles,International:EastAsian,0,sufw,0,0
+Rice Noodles,International:EastAsian,0,sufw,0,0
+Wide Rice Noodles,International:EastAsian,0,sufw,0,0
+Spaghetti Style Rice Noodles,International:EastAsian,0,sufw,0,0
+Ragu,Tomato,0,sufw,0,0
+Canned Plum Tomatoes,Tomato,0,sufw,0,0
+Tomato Sauce,Tomato,0,sufw,0,0
+Tomato Puree,Tomato,0,sufw,0,0
+Diced Tomatoes,Tomato,0,sufw,0,0
+Whole Tomatoes,Tomato,0,sufw,0,0
+Pasta Spaghetti,Pasta,0,sufw,0,0
+Artichoke Hearts,Pasta,0,sufw,0,0
+Capers,Pasta,0,sufw,0,0
+Pasta Orichiette,Pasta,0,sufw,0,0
+Pasta Fettuccine,Pasta,0,sufw,0,0
+Pasta Rigatoni,Pasta,0,sufw,0,0
+Pasta Farfalline,Pasta,0,sufw,0,0
+Pasta Lasagne,Pasta,0,sufw,0,0
+Pasta Rotini,Pasta,0,sufw,0,0
+Kluski,Pasta,0,sufw,0,0
+Pasta Shell,Pasta,0,sufw,0,0
+Gnocchi,Pasta,0,sufw,0,0
+Worcestershire Sauce,Condiments,1,sufw,0,0
+Dirty Rice Mix,Rice,0,sufw,0,0
+Quinoa,Rice,1,sufw,0,0
+Tomato Soup,Soup,0,sufw,0,0
+Chicken Broth,Soup,0,sufw,0,0
+Beef Broth,Soup,0,sufw,0,0
+Cream of Mushroom Soup,Soup,0,sufw,0,0
+Flour,Baking,1,sufw,0,0
+Bread Flour,Baking,1,sufw,0,0
+Brown Sugar,Baking,1,sufw,0,0
+Cornmeal,Baking,1,sufw,0,0
+Crisco,Baking,1,sufw,0,0
+Olive Oil,Baking,1,sufw,0,0
+Peanut Oil,Baking,1,sufw,0,0
+Sesame Oil,Baking,1,sufw,0,0
+Truffle Oil,Baking,1,sufw,0,0
+Oil,Baking,1,sufw,0,0
+Corn Starch,Baking,1,sufw,0,0
+Powdered Milk,Baking,1,sufw,0,0
+Baking Powder,Baking,1,sufw,0,0
+Baking Soda,Baking,1,sufw,0,0
+Beef Bouillon,Baking,1,sufw,0,0
+Chicken Bouillon,Baking,1,sufw,0,0
+Gumbo File,Baking,1,sufw,0,0
+Yeast,Baking,1,sufw,0,0
+Thyme,Baking,1,sufw,0,0
+Cumin,Baking,1,sufw,0,0
+Cayenne Pepper,Baking,1,sufw,0,0
+Mustard Seeds,Baking,1,sufw,0,0
+Cloves,Baking,1,sufw,0,0
+Cardamom Pods,Baking,1,sufw,0,0
+Coriander,Baking,1,sufw,0,0
+Cinnamon,Baking,1,sufw,0,0
+Onion Powder,Baking,1,sufw,0,0
+Garam Masala,Baking,1,sufw,0,0
+Dried Basil,Baking,1,sufw,0,0
+Bay Leaves,Baking,1,sufw,0,0
+Chili Powder,Baking,1,sufw,0,0
+Poultry Seasoning,Baking,1,sufw,0,0
+Parsely,Baking,1,sufw,0,0
+Rosemary,Baking,1,sufw,0,0
+Marjoram,Baking,1,sufw,0,0
+Sage,Baking,1,sufw,0,0
+Mesquite,Baking,1,sufw,0,0
+Turmeric,Baking,1,sufw,0,0
+Cajun Seasoning,Baking,1,sufw,0,0
+Chips,Snacks,0,sufw,0,0
+Tomato Juice,Juice,0,sufw,0,0
+Honey,PBJ,1,sufw,0,0
+Eggs,MilkAndEggs,1,sufw,0,0,Eggs
+Milk,MilkAndEggs,0,sufw,0,0
+Heavy Cream,MilkAndEggs,0,sufw,0,0
+Half and Half,MilkAndEggs,0,sufw,0,0
+Red Wine,Alcohol,1,sufw,0,0
+White Wine, Alcohol,0,sufw,0,0
