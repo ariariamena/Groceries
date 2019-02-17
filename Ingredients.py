@@ -191,7 +191,7 @@ def PromptIngrFamilyPack(ingredient):
     return ingredient
 
 def ValidMeatType(meat_type):
-    if meat_type.lower() in valid_meat_types:
+    if meat_type.lower() in valid_meat_types or meat_type=='':
         return True
     else:
         return False
@@ -299,6 +299,8 @@ def ValidParameters(parameters):
         PromptBadImportParameter(name, 'family pack', parameters[5], Common.PromptValidBool)
     if len(parameters) > 6 and not ValidMeatType(parameters[6]):
         valid = False
+        print "length of parameters = "+str(len(parameters))
+        print "length of parameter 6 = "+str(len(parameters[6]))+"  value = "+hex(ord(parameters[6][0]))
         PromptBadImportParameter(name, 'meat type', parameters[6], PromptValidMeatType)
     return valid
 
@@ -306,7 +308,7 @@ def ImportIngredients(ingr_lines):
     ingr_lines = ingr_lines[1:] #ignore header
     num_added = 0
     for i in ingr_lines:
-        parameters = i.replace('\n','').split(',')
+        parameters = i.replace('\n','').replace('\t',',').replace('\x0d','').split(',')
         if ValidParameters(parameters):
             name = parameters[0]
             location = parameters[1]

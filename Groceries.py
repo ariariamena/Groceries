@@ -38,6 +38,7 @@ def DisplayEditCurrentRecipesMenu():
     print '1) Add a recipe'
     print '2) Remove a recipe'
     print '3) See current recipes'
+    print '4) Clear all recipes'
     print '(e)xit to previous menu'
     return
 
@@ -56,6 +57,8 @@ def EditCurrentRecipesMenu():
             Common.RemoveItem(current_recipes, 'a recipe', 'recipes', Recipe.ListRecipes, DisplayEditCurrentRecipesMenu, False, False)
         elif selection == '3':
             print '\n'.join([r.name for r in current_recipes])
+        elif selection == '4':
+            current_recipes = []
     return
 
 def DisplaySuggestRecipeMenu():

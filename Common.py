@@ -4,7 +4,7 @@ import pickle
 import copy
 import datetime
 
-
+is_debugging = True
 
 class RestrictionProfile:
     def __init__(self, name = '', restrictions=[], banned_ingredients=[], banned_recipes=[]):
@@ -456,3 +456,7 @@ def PromptValidNum():
 
 def log(string_to_log):
     print str(string_to_log)
+
+def debug(string_to_log):
+    if is_debugging:
+        print str(string_to_log)

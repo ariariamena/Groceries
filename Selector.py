@@ -5,6 +5,12 @@ import Common
 import History
 from numpy.random import choice
 
+def LogProbabilities(message, recipe_list, weights):
+    Common.debug(message)
+    for i, r in enumerate(recipe_list):
+        Common.debug(r.name+": "+str(weights[i]))
+
+
 def SelectFirstRecipe(global_state, current_restrictions, current_chefs, ingredients_to_use, banned_ingredients, history = Common.History()):
     '''
     Pick first recipe
@@ -15,6 +21,7 @@ def SelectFirstRecipe(global_state, current_restrictions, current_chefs, ingredi
     new_recipe = None
     weights = [(WeightFirstRecipe(global_state, r, current_restrictions, current_chefs, ingredients_to_use, banned_ingredients, history)) for r in global_state.all_recipes]
     weight_sum = sum(weights)
+    LogProbabilities("Weights for the first recipe", global_state.all_recipes, weights)
     if weight_sum == 0:
         print "Error: first recipe choice is over-constrained. Returning a random recipe"
         ch = choice(len(global_state.all_recipes), 1)
@@ -46,6 +53,8 @@ def SelectMatchingRecipes(global_state, previous_recipes, current_restrictions, 
             print "Warning: Matching recipes are over-constrained. Returning existing list."
             return new_recipes
         weights = [float(w/float(weight_sum)) for w in weights]
+        msg="Weights for the "+str(num_filled+1)+"th recipe"
+        LogProbabilities(msg, global_state.all_recipes, weights)
         ch = choice(len(global_state.all_recipes),1, p = weights)
         new_recipes.append(global_state.all_recipes[ch])
         num_filled = sum([int(r.num_servings) for r in new_recipes])
@@ -368,7 +377,7 @@ def WeightFirstRecipe(global_state, recipe, current_restrictions, current_chefs,
 def WeightMatchingRecipe(global_state, recipe, previous_recipes, current_restrictions, current_chefs, ingredients_to_use, banned_ingredients, history = Common.History()):
     '''
     '''
-    Common.log("Weighting matching recipe "+recipe.name)
+    Common.log("\nWeighting matching recipe "+recipe.name)
     weight = 1
     weight *=CalculateDuplicateWeight(recipe, previous_recipes)
     Common.log("Weight after Duplicate = "+str(weight))

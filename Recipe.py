@@ -425,58 +425,63 @@ def PromptBadImportParameter(recipe_name, parameter_type, val, prompt_valid):
     return
 
 def ValidParameters(parameters):
-    valid = True
-    print '\n'.join(parameters)
-    if len(parameters) < 10:
-        if len(parameters) ==0:
-            print 'Recipe has no parameters'
-            return False
-        print 'Recipe '+parameters[0]+ ' has too few parameters.'
-    name = parameters[0]
-    ingredients = parameters[1].split(':')
-    Common.log(str(ingredients))
-    ingredient_data = [{'name':i.split(';')[0],'quantity':i.split(';')[1],'unit':i.split(';')[2]} for i in ingredients]
-    for i in ingredient_data:
-        if Ingredients.IngredientByName(i['name']) == None:
-            PromptBadImportParameter(name, 'ingredient name', i['name'], PromptValidIngredient)
+    try:
+        valid = True
+        print '\n'.join(parameters)
+        if len(parameters) < 10:
+            if len(parameters) ==0:
+                print 'Recipe has no parameters'
+                return False
+            print 'Recipe '+parameters[0]+ ' has too few parameters.'
+        name = parameters[0]
+        ingredients = parameters[1].split(':')
+        Common.log(str(ingredients))
+        Common.log("Ingredients in "+name)
+        for i in ingredients:
+            print i
+        ingredient_data = [{'name':i.split(';')[0],'quantity':i.split(';')[1],'unit':i.split(';')[2]} for i in ingredients]
+        for i in ingredient_data:
+            if Ingredients.IngredientByName(i['name']) == None:
+                PromptBadImportParameter(name, 'ingredient name', i['name'], PromptValidIngredient)
+                valid = False
+            if not Common.ValidNum(i['quantity']):
+                valid = False
+                PromptBadImportParameter(name, 'ingredient quantity', i['quantity'], Common.PromptValidNum)
+            if not Ingredients.ValidUnit(i['unit']):
+                valid = False
+                PromptBadImportParameter(name, 'ingredient unit', i['unit'], Ingredients.PromptValidUnit)
+        if not ValidCuisineType(parameters[2]):
             valid = False
-        if not Common.ValidNum(i['quantity']):
+            PromptBadImportParameter(name, 'cuisine type', parameters[2], PromptValidCuisineType)
+        if not ValidChef(parameters[3]):
             valid = False
-            PromptBadImportParameter(name, 'ingredient quantity', i['quantity'], Common.PromptValidNum)
-        if not Ingredients.ValidUnit(i['unit']):
+            PromptBadImportParameter(name, 'chef', parameters[3], PromptValidChef)
+        if not Common.ValidNum(parameters[4]):
             valid = False
-            PromptBadImportParameter(name, 'ingredient unit', i['unit'], Ingredients.PromptValidUnit)
-    if not ValidCuisineType(parameters[2]):
-        valid = False
-        PromptBadImportParameter(name, 'cuisine type', parameters[2], PromptValidCuisineType)
-    if not ValidChef(parameters[3]):
-        valid = False
-        PromptBadImportParameter(name, 'chef', parameters[3], PromptValidChef)
-    if not Common.ValidNum(parameters[4]):
-        valid = False
-        PromptBadImportParameter(name, 'number of servings', parameters[4], Common.PromptValidNum)
-    if not Common.ValidNum(parameters[5]):
-        valid = False
-        PromptBadImportParameter(name, 'time to cook', parameters[5], Common.PromptValidNum)
-    if not Common.ValidNum(parameters[6]):
-        valid = False
-        PromptBadImportParameter(name, 'rating', parameters[6], Common.PromptValidNum)
-    if not Common.ValidBool(parameters[7]):
-        valid = False
-        PromptBadImportParameter(name, 'school/work friendliness', parameters[7], Common.PromptValidBool)
-    if not Common.ValidBool(parameters[8]):
-        valid = False
-        PromptBadImportParameter(name, 'kid friendliness', parameters[8], Common.PromptValidBool)
-    restrictions = parameters[9].split(':')
-    Common.log("Restrictions are "+str(restrictions)+'  '+str(len(restrictions)))
-    for r in restrictions:
-        if r == '':
-            continue
-        if not ValidRestriction(r):
+            PromptBadImportParameter(name, 'number of servings', parameters[4], Common.PromptValidNum)
+        if not Common.ValidNum(parameters[5]):
             valid = False
-            PromptBadImportParameter(name, 'restriction', r, PromptValidRestriction)
-    return valid
-
+            PromptBadImportParameter(name, 'time to cook', parameters[5], Common.PromptValidNum)
+        if not Common.ValidNum(parameters[6]):
+            valid = False
+            PromptBadImportParameter(name, 'rating', parameters[6], Common.PromptValidNum)
+        if not Common.ValidBool(parameters[7]):
+            valid = False
+            PromptBadImportParameter(name, 'school/work friendliness', parameters[7], Common.PromptValidBool)
+        if not Common.ValidBool(parameters[8]):
+            valid = False
+            PromptBadImportParameter(name, 'kid friendliness', parameters[8], Common.PromptValidBool)
+        restrictions = parameters[9].split(':')
+        Common.log("Restrictions are "+str(restrictions)+'  '+str(len(restrictions)))
+        for r in restrictions:
+            if r == '':
+                continue
+            if not ValidRestriction(r):
+                valid = False
+                PromptBadImportParameter(name, 'restriction', r, PromptValidRestriction)
+        return valid
+    except Exception as e:
+        return False
 
 
 def ImportRecipes(rec_lines):
